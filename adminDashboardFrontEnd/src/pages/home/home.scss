@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+
+    .homeContainer{
+        border: 1px solid red;
+        flex: 6;
+
+        .widgets{
+            display: flex;
+            padding: 20px;
+            border: 1px solid red;
+        
+        }
+    }
+
+}
