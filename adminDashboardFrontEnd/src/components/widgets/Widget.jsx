@@ -47,7 +47,14 @@ export default function Widget({type}){
                 title: "EARNINGS",
                 isMoney: true,
                 link: "View all earnings",
-                icon: <MonetizationOnOutlinedIcon className='icon'/>
+                icon: <MonetizationOnOutlinedIcon className='icon'
+
+                    style={{
+                        color: "green",
+                        backgroundColor: "rgba(0,128,0,0.2)"
+                    }}
+
+                />
             };
             break;
 
@@ -57,7 +64,14 @@ export default function Widget({type}){
                 title: "BALANCE",
                 isMoney: true,
                 link: "See details",
-                icon: <AccountBalanceWalletOutlinedIcon className='icon'/>
+                icon: <AccountBalanceWalletOutlinedIcon className='icon'
+
+                    style={{
+                        color: "purple",
+                        backgroundColor: "rgba(128,0,128,0.2)"
+                    }}
+                
+                />
             };
             break;
 

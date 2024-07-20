@@ -1,0 +1,14 @@
+.chart{
+    flex: 4;
+    border: 1px solid blue;
+    color: gray;
+
+
+    .title{
+        margin-bottom: 20px;
+    }
+
+    .chartGrid{
+        stroke: lightgray;
+    }
+}
