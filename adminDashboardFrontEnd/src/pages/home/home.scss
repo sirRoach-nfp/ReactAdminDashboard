@@ -2,13 +2,13 @@
     display: flex;
 
     .homeContainer{
-        border: 1px solid red;
+        border: 1px red;
         flex: 6;
 
         .widgets,.charts{
             display: flex;
             padding: 20px;
-            border: 1px solid red;
+            border: 1px  red;
         
         }
 
@@ -19,7 +19,7 @@
         }
 
         .listContainer{
-            border: 1px solid red;
+            border: 1px  red;
             padding: 20px;
             margin: 20px;
 

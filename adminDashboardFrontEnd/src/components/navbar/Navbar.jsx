@@ -3,8 +3,12 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import Badge from '@mui/material/Badge';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import {Link} from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 export default function Navbar(){
+    const {dispatch} = useContext(DarkModeContext);
     return(
         <div className="navbar">
             <div className="wrapper">
@@ -21,7 +25,7 @@ export default function Navbar(){
                             </div>
 
                             <div className="item">
-                                <LanguageOutlinedIcon className="icon"/>
+                                <DarkModeOutlinedIcon className="icon" onClick={()=> dispatch({type: "TOGGLE"})}/>
                         
                             </div>
 

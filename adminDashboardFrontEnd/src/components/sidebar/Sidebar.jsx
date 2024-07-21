@@ -8,18 +8,21 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
-
+import { DarkModeContext } from "../../context/darkModeContext";
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
-
+import {Link} from "react-router-dom";
+import { useContext } from "react";
 export default function Sidebar(){
+    const {dispatch} = useContext(DarkModeContext);
+
     return(
        <div className="sidebar"> 
 
             <div className="top">
-
-                <span className="logo">mantaAdmin</span>
-
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <span className="logo">mantaAdmin</span>
+                </Link>
             </div>
 
             <hr />
@@ -32,16 +35,20 @@ export default function Sidebar(){
                         <span>Dashboard</span>
                     </li>
                     <p className="title">TITLE</p>
-                    <li>
-                        <PersonIcon className="icon"/>
-                        <span>Users</span>
-                    </li>
 
-                    <li>
-                        <Inventory2Icon className="icon"/>
-                        <span>Products</span>
-                    </li>
+                    <Link to="/users" style={{textDecoration: "none"}}>
+                        <li>
+                            <PersonIcon className="icon"/>
+                            <span>Users</span>
+                        </li>
+                    </Link>
 
+                    <Link to="/products" style={{textDecoration: "none"}}>
+                        <li>
+                            <Inventory2Icon className="icon"/>
+                            <span>Products</span>
+                        </li>
+                    </Link>
                     <li>
                         <ShoppingCartIcon className="icon"/>
                         <span>Orders</span>
@@ -95,8 +102,8 @@ export default function Sidebar(){
 
             <div className="bottom">
 
-                <div className="colorOption"></div>
-                <div className="colorOption"></div>
+                <div className="colorOption" onClick={()=> dispatch({type:"LIGHT"})}></div>
+                <div className="colorOption" onClick={()=> dispatch({type:"DARK"})}></div>
 
 
             </div>

@@ -121,7 +121,7 @@ export default function ListTable() {
 
 
         
-            <TableContainer component={Paper}>
+            <TableContainer component={Paper} className='tbCont'>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                     <TableRow>
@@ -142,7 +142,7 @@ export default function ListTable() {
                         <TableRow
                             key={row.id}
                         >
-                        <TableCell>
+                        <TableCell className='tableCell'>
                             {row.id}
                         </TableCell>
 
